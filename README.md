@@ -1,6 +1,8 @@
 # JEQUILIB
 Jupyter file using matlab kernel and PHREEQC (optional) to solve equilibrium problems formulated in tableau notation.
 
+once you have Jupyter working with the Matlab kernel open Tutorial_AgCl_example.ipynb and read the tutorial instructions.  All the files are included in that example ipynb file.  So that is all you need to replicate the other files for your local use.  
+
 Install anaconda or install miniconda
 
 to add matlab kernel
