@@ -1,0 +1,44 @@
+PHASES 
+pH_Fix
+H+ = H+
+-log_k           0.0
+pe_Fix
+e- = e-
+-log_k           0.0
+SOLUTION 
+       pe      14
+       pH      7
+       temp      25
+-units mol/kgw
+Cl 1e-05 
+Ag 0.0001 
+Na 1e-05 
+N(5) 0.0001 
+EQUILIBRIUM_PHASES 
+AgCl(s)   0.0   0
+       pH_Fix -7          HClO4 10.0
+-force_equality true
+       pe_Fix -14          O2
+-force_equality true
+SELECTED_OUTPUT
+-file selected.out
+-selected_out true
+-user_punch true
+-high_precision true
+-reset false
+-simulation false
+-state false
+-distance false
+-time false
+-step false
+-ph true
+-pe true
+-reaction false
+-temperature false
+-alkalinity false
+-ionic_strength false
+-water false
+-charge_balance false
+-percent_error false
+-molalities Cl- Ag+ Na+ NO3- AgCl AgCl2- AgCl3-2 AgCl4-3  
+-equilibrium_phases AgCl(s)  

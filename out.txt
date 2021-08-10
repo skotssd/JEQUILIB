@@ -1,0 +1,307 @@
+   Input file: runphreeqc.txt
+  Output file: out.txt
+Database file: llnl_AgCls.dat
+
+------------------
+Reading data base.
+------------------
+
+	LLNL_AQUEOUS_MODEL_PARAMETERS
+	NAMED_EXPRESSIONS
+	SOLUTION_MASTER_SPECIES
+	SOLUTION_SPECIES
+	PHASES
+	EXCHANGE_MASTER_SPECIES
+	EXCHANGE_SPECIES
+	SURFACE_MASTER_SPECIES
+	SURFACE_SPECIES
+	RATES
+	END
+------------------------------------
+Reading input data for simulation 1.
+------------------------------------
+
+	PHASES 
+	pH_Fix
+	H+ = H+
+	log_k           0.0
+	pe_Fix
+	e- = e-
+	log_k           0.0
+	SOLUTION 
+	       pe      14
+	       pH      7
+	       temp      25
+	units mol/kgw
+	Cl 1e-05 
+	Ag 0.0001 
+	Na 1e-05 
+	N(5) 0.0001 
+	EQUILIBRIUM_PHASES 
+	AgCl(s)   0.0   0
+	       pH_Fix -7          HClO4 10.0
+	force_equality true
+	       pe_Fix -14          O2
+	force_equality true
+	SELECTED_OUTPUT
+	file selected.out
+	selected_out true
+	user_punch true
+	high_precision true
+	reset false
+	simulation false
+	state false
+	distance false
+	time false
+	step false
+	ph true
+	pe true
+	reaction false
+	temperature false
+	alkalinity false
+	ionic_strength false
+	water false
+	charge_balance false
+	percent_error false
+	molalities Cl- Ag+ Na+ NO3- AgCl AgCl2- AgCl3-2 AgCl4-3  
+	equilibrium_phases AgCl(s)  
+-------------------------------------------
+Beginning of initial solution calculations.
+-------------------------------------------
+
+Initial solution 1.	
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Ag                1.000e-04   1.000e-04
+	Cl                1.000e-05   1.000e-05
+	N(5)              1.000e-04   1.000e-04
+	Na                1.000e-05   1.000e-05
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000    
+                                       pe  =  14.000    
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.084e-04
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =  -3.692e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =   3.692e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =   0.00
+                               Iterations  =   4
+                                  Total H  = 1.110507e+02
+                                  Total O  = 5.554585e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   H+              1.012e-07   1.000e-07    -6.995    -7.000    -0.005      0.00
+   OH-             9.750e-08   9.633e-08    -7.011    -7.016    -0.005     (0)  
+   H2O             5.553e+01   9.998e-01     1.744    -0.000     0.000     (0)  
+Ag(1)         1.000e-04
+   Ag+             9.835e-05   9.716e-05    -4.007    -4.013    -0.005     (0)  
+   AgCl            1.652e-06   1.652e-06    -5.782    -5.782     0.000     (0)  
+   AgCl2-          1.410e-09   1.393e-09    -8.851    -8.856    -0.005     (0)  
+   AgCl3-2         8.232e-15   7.843e-15   -14.084   -14.105    -0.021     (0)  
+   AgCl4-3         3.391e-21   3.041e-21   -20.470   -20.517    -0.047     (0)  
+Ag(2)         2.382e-24
+   Ag+2            2.382e-24   2.270e-24   -23.623   -23.644    -0.021     (0)  
+Cl(-1)        1.000e-05
+   Cl-             8.345e-06   8.244e-06    -5.079    -5.084    -0.005     (0)  
+   AgCl            1.652e-06   1.652e-06    -5.782    -5.782     0.000     (0)  
+   AgCl2-          1.410e-09   1.393e-09    -8.851    -8.856    -0.005     (0)  
+   NaCl            1.432e-11   1.432e-11   -10.844   -10.844     0.000     (0)  
+   HCl             1.852e-13   1.852e-13   -12.732   -12.732     0.000     (0)  
+   AgCl3-2         8.232e-15   7.843e-15   -14.084   -14.105    -0.021     (0)  
+   AgCl4-3         3.391e-21   3.041e-21   -20.470   -20.517    -0.047     (0)  
+Cl(1)         3.031e-21
+   HClO            2.381e-21   2.381e-21   -20.623   -20.623     0.000     (0)  
+   ClO-            6.499e-22   6.421e-22   -21.187   -21.192    -0.005     (0)  
+Cl(3)         6.452e-31
+   ClO2-           6.451e-31   6.374e-31   -30.190   -30.196    -0.005     (0)  
+   HClO2           9.423e-35   9.423e-35   -34.026   -34.026     0.000     (0)  
+Cl(5)         4.558e-26
+   ClO3-           4.558e-26   4.503e-26   -25.341   -25.347    -0.005     (0)  
+Cl(7)         1.607e-25
+   ClO4-           1.607e-25   1.588e-25   -24.794   -24.799    -0.005     (0)  
+H(0)          0.000e+00
+   H2              0.000e+00   0.000e+00   -45.100   -45.100     0.000     (0)  
+N(5)          1.000e-04
+   NO3-            1.000e-04   9.879e-05    -4.000    -4.005    -0.005     (0)  
+   HNO3            5.167e-13   5.167e-13   -12.287   -12.287     0.000     (0)  
+Na            1.000e-05
+   Na+             1.000e-05   9.880e-06    -5.000    -5.005    -0.005     (0)  
+   NaCl            1.432e-11   1.432e-11   -10.844   -10.844     0.000     (0)  
+   NaOH            1.642e-13   1.642e-13   -12.785   -12.785     0.000     (0)  
+O(0)          2.022e-02
+   O2              1.011e-02   1.011e-02    -1.995    -1.995     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  Ag               -4.50      3.49    7.99  Ag
+  Ag(g)           -47.60      3.49   51.09  Ag
+  AgCl(s)           0.67     -9.10   -9.76  AgCl
+  Cl2(g)          -28.16    -25.17    2.99  Cl2
+  H2(g)           -42.00    -45.10   -3.10  H2
+  H2O(g)           -1.59     -0.00    1.59  H2O
+  Halite          -11.65    -10.09    1.56  NaCl
+  HCl(g)          -18.39    -12.08    6.30  HCl
+  Ice              -0.14     -0.00    0.14  H2O
+  Na              -64.88      2.49   67.37  Na
+  Na(g)           -78.37      2.49   80.86  Na
+  Na2O            -63.43      3.99   67.42  Na2O
+  NO2(g)          -18.86    -10.51    8.35  NO2
+  O2(g)             0.90     -2.00   -2.89  O2
+  pe_Fix          -14.00    -14.00    0.00  e-
+  pH_Fix           -7.00     -7.00    0.00  H+
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+-----------------------------------------
+Beginning of batch-reaction calculations.
+-----------------------------------------
+
+Reaction step 1.
+
+Using solution 1.	
+Using pure phase assemblage 1.	
+
+-------------------------------Phase assemblage--------------------------------
+
+                                                      Moles in assemblage
+Phase               SI  log IAP  log K(T, P)   Initial       Final       Delta
+
+AgCl(s)           0.00    -9.76     -9.76    0.000e+00   7.727e-06   7.727e-06
+pH_Fix           -7.00    -7.00      0.00
+	 HClO4              is reactant       1.000e+01   1.000e+01   1.936e-13
+pe_Fix          -14.00   -14.00      0.00
+	 O2                 is reactant       1.000e+01   1.000e+01  -2.067e-08
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Ag                9.227e-05   9.227e-05
+	Cl                2.273e-06   2.273e-06
+	N                 1.000e-04   1.000e-04
+	Na                1.000e-05   1.000e-05
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  14.000      Adjusted to redox equilibrium
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.020e-04
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =  -3.692e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =   3.692e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =   0.00
+                               Iterations  =   4
+                                  Total H  = 1.110507e+02
+                                  Total O  = 5.554585e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   H+              1.012e-07   1.000e-07    -6.995    -7.000    -0.005      0.00
+   OH-             9.747e-08   9.633e-08    -7.011    -7.016    -0.005     (0)  
+   H2O             5.553e+01   9.998e-01     1.744    -0.000     0.000     (0)  
+Ag(1)         9.227e-05
+   Ag+             9.192e-05   9.084e-05    -4.037    -4.042    -0.005     (0)  
+   AgCl            3.552e-07   3.552e-07    -6.450    -6.450     0.000     (0)  
+   AgCl2-          6.965e-11   6.884e-11   -10.157   -10.162    -0.005     (0)  
+   AgCl3-2         9.341e-17   8.913e-17   -16.030   -16.050    -0.020     (0)  
+   AgCl4-3         8.830e-24   7.945e-24   -23.054   -23.100    -0.046     (0)  
+Ag(2)         2.224e-24
+   Ag+2            2.224e-24   2.122e-24   -23.653   -23.673    -0.020     (0)  
+Cl(-1)        2.273e-06
+   Cl-             1.918e-06   1.895e-06    -5.717    -5.722    -0.005     (0)  
+   AgCl            3.552e-07   3.552e-07    -6.450    -6.450     0.000     (0)  
+   AgCl2-          6.965e-11   6.884e-11   -10.157   -10.162    -0.005     (0)  
+   NaCl            3.293e-12   3.293e-12   -11.482   -11.482     0.000     (0)  
+   HCl             4.257e-14   4.257e-14   -13.371   -13.371     0.000     (0)  
+   AgCl3-2         9.341e-17   8.913e-17   -16.030   -16.050    -0.020     (0)  
+   AgCl4-3         8.830e-24   7.945e-24   -23.054   -23.100    -0.046     (0)  
+Cl(1)         6.968e-22
+   HClO            5.475e-22   5.475e-22   -21.262   -21.262     0.000     (0)  
+   ClO-            1.494e-22   1.476e-22   -21.826   -21.831    -0.005     (0)  
+Cl(3)         1.483e-31
+   ClO2-           1.483e-31   1.465e-31   -30.829   -30.834    -0.005     (0)  
+   HClO2           2.167e-35   2.167e-35   -34.664   -34.664     0.000     (0)  
+Cl(5)         1.047e-26
+   ClO3-           1.047e-26   1.035e-26   -25.980   -25.985    -0.005     (0)  
+Cl(7)         3.693e-26
+   ClO4-           3.693e-26   3.650e-26   -25.433   -25.438    -0.005     (0)  
+H(0)          0.000e+00
+   H2              0.000e+00   0.000e+00   -45.100   -45.100     0.000     (0)  
+N(-03)        0.000e+00
+   N3-             0.000e+00   0.000e+00  -107.287  -107.292    -0.005     (0)  
+   HN3             0.000e+00   0.000e+00  -109.590  -109.590     0.000     (0)  
+N(-3)         0.000e+00
+   NH4+            0.000e+00   0.000e+00   -66.838   -66.843    -0.005     (0)  
+   NH3             0.000e+00   0.000e+00   -69.083   -69.083     0.000     (0)  
+N(0)          3.995e-25
+   N2              1.997e-25   1.997e-25   -24.700   -24.700     0.000     (0)  
+N(3)          5.817e-19
+   NO2-            5.816e-19   5.748e-19   -18.235   -18.241    -0.005     (0)  
+   HNO2            9.810e-23   9.810e-23   -22.008   -22.008     0.000     (0)  
+N(5)          1.000e-04
+   NO3-            1.000e-04   9.883e-05    -4.000    -4.005    -0.005     (0)  
+   HNO3            5.169e-13   5.169e-13   -12.287   -12.287     0.000     (0)  
+Na            1.000e-05
+   Na+             1.000e-05   9.883e-06    -5.000    -5.005    -0.005     (0)  
+   NaCl            3.293e-12   3.293e-12   -11.482   -11.482     0.000     (0)  
+   NaOH            1.643e-13   1.643e-13   -12.784   -12.784     0.000     (0)  
+O(0)          2.022e-02
+   O2              1.011e-02   1.011e-02    -1.995    -1.995     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  Ag               -4.53      3.46    7.99  Ag
+  Ag(g)           -47.63      3.46   51.09  Ag
+  AgCl(s)           0.00     -9.76   -9.76  AgCl
+  Cl2(g)          -29.44    -26.44    2.99  Cl2
+  H2(g)           -42.00    -45.10   -3.10  H2
+  H2O(g)           -1.59     -0.00    1.59  H2O
+  Halite          -12.29    -10.73    1.56  NaCl
+  HCl(g)          -19.02    -12.72    6.30  HCl
+  Ice              -0.14     -0.00    0.14  H2O
+  N2(g)           -21.52    -24.70   -3.18  N2
+  Na              -64.88      2.49   67.37  Na
+  Na(g)           -78.37      2.49   80.86  Na
+  Na2O            -63.43      3.99   67.42  Na2O
+  NH3(g)          -70.88    -69.08    1.80  NH3
+  NO(g)           -25.48    -24.74    0.74  NO
+  NO2(g)          -18.86    -10.51    8.35  NO2
+  O2(g)             0.90     -2.00   -2.89  O2
+  pe_Fix          -14.00    -14.00    0.00  e-
+  pH_Fix           -7.00     -7.00    0.00  H+
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+------------------
+End of simulation.
+------------------
+
+------------------------------------
+Reading input data for simulation 2.
+------------------------------------
+
+-------------------------------
+End of Run after 1.198 Seconds.
+-------------------------------
+
